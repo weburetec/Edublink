@@ -30,11 +30,10 @@ const OrderPayment = () => {
         </div>
       </div>
 
-      {/* <a href="#Test" className="edu-btn order-place">
-        Place Your order <i className="icon-4"></i>
-      </a> */}
       <div>
-        <button onClick={handleClick}>Likes </button>
+        <button className="edu-btn order-place" onClick={handleClick}>
+          Place your order <i className="icon-4"></i>
+        </button>
       </div>
     </div>
   );
