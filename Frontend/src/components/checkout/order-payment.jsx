@@ -1,9 +1,33 @@
 import React from "react";
-import Link from "next/link";
 
 const OrderPayment = () => {
-  const handleClick = () => {
-    console.log("Test");
+  const handleClick = async () => {
+    event.preventDefault();
+    try {
+      //   const requestData = {
+      //     amount: 500,
+      //     currency: "LKR",
+      //   };
+      const method = "POST";
+
+      const options = {
+        method: method,
+        headers: {
+          Authorization:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImU1ZDhjYTc3LTU4MjgtNDVkNy05MmY2LTZjYTAxODIzNzQ3NiIsImNvbXBhbnlJZCI6IjY0NmVkYWYyMDI5OTNjMDAwODhkMDIwYSIsImlhdCI6MTY4Njc0NzQzNiwiZXhwIjo0ODQyNDIxMDM2fQ.7RzacNZcu2TwCDi8JOvAzIL2SjJ3e5aA7AGalpbVwBw",
+          "Access-Control-Allow-Origin": "true",
+        },
+        body: JSON.stringify(),
+      };
+      const url = "/api/transactions";
+
+      const response = await fetch(url, options);
+      const final = await response.json();
+
+      console.log("final:", final);
+    } catch (error) {
+      console.log("Error:", error);
+    }
   };
 
   return (
@@ -32,7 +56,7 @@ const OrderPayment = () => {
 
       <div>
         <button className="edu-btn order-place" onClick={handleClick}>
-          Place your order <i className="icon-4"></i>
+          Place your order
         </button>
       </div>
     </div>
