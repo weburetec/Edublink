@@ -139,7 +139,7 @@ const FooterTwo = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="inner text-center">
-                                <p>Copyright {new Date().getFullYear()} <a href="https://1.envato.market/AoJezj" rel="noreferrer" target="_blank">EduBlink</a> Designed By <a href="https://1.envato.market/YgGJbj" target="_blank" rel="noreferrer">DevsBlink</a>. All Rights Reserved</p>
+                                <p>Copyright {new Date().getFullYear()} <a href="https://1.envato.market/AoJezj" rel="noreferrer" target="_blank">LearnX Study</a> Designed By <a href="https://www.weburetech.com" target="_blank" rel="noreferrer">Webure Technologies</a>. All Rights Reserved</p>
                             </div>
                         </div>
                     </div>
